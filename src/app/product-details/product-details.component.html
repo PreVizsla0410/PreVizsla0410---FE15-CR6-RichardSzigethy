@@ -1,0 +1,19 @@
+
+<div class="container-fluid">
+    <div class="row" >
+        <h4  id="success-Info" role="alert"> </h4>
+        
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngIf="dishes">
+            
+            <div class="card m-1 mx-3 pb-2 cards-style ">
+            <h2 class="detail-dishes p-2">Your order</h2>
+            <img src="{{dishes.img}}" class="card-img-top" alt="{{dishes.name}}"> 
+            <h3 class="card-text text-light bg-dark text-center fs-5 p-2">{{dishes.name}}</h3>
+            <h3 class="w-50 fs-5 p-1 m-2">Price: {{dishes.price}} €</h3>
+            <p class="card-text text-danger  m-2"><b>Description:</b> {{ dishes.description}}</p>
+            <h3 class="btn btn-success  text-center fs-5 p-1 m-2"(click)="addToCart()" >Order</h3>
+  
+           </div>
+</div>
+    </div>
+</div>

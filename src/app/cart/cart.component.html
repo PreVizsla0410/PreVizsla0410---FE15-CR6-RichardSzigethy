@@ -1,0 +1,40 @@
+<div class="container-fluid ()">
+    <div class="row" >
+        <h2 class="detail-dishes">Your order</h2>
+      
+       <div>
+        <h4  id="success-Info" class="m-2 p-2 w-25"role="alert"></h4><br>
+        <h4  id="total"  class=" m-2 p-2 w-25"></h4> 
+       </div>
+        
+     
+            <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let dishes of dishes">
+            
+            <div class="card m-1 mx-3 pb-2 cards-style ">
+           
+           <img src="{{dishes.img}}" class="card-img-top" alt="{{dishes.name}}"> 
+            <h3 class="card-text text-light bg-dark text-center fs-5 p-2">{{dishes.name}}</h3>
+            <h3 class="btn btn-danger w-50 text-center fs-5 p-1 m-2">{{dishes.price}} €</h3>
+          
+          
+           
+          
+           </div>
+        </div>
+
+        <!-- <h4  id="total"  class=" m-2 p-2"role="alert"></h4> -->
+        <!-- <h4 class=" m-2 p-2 w-25 btn btn-info" (click)="onClick()" >Click to see Total</h4>  -->
+        <form class="formCart" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+            <div class="formgroups">
+                <label for="name">Name</label><br>
+                <input type="text" formControlName="name">
+            </div>
+            <div>
+                <label for="name">Address</label><br>
+                <input type="text" formControlName="address">
+            </div>
+          <button class="btn btn-success my-2 p-2" type="submit">Purchase</button>
+      </form>
+     
+    </div>
+</div>

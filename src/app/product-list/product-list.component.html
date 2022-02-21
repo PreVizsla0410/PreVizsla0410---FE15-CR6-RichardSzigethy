@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row" >
+        <h2 class="title">A taste of Italy</h2>
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let dishes of dishes">
+            <div class="card m-1 mx-3 pb-2 cards-style ">
+           <img src="{{dishes.img}}" class="card-img-top" alt="{{dishes.name}}"> 
+            <h3 class="card-text text-light bg-dark text-center fs-5 p-2">{{dishes.name}}</h3>
+            <h3 class="w-50 text-right fs-5 p-1 m-2">Price: {{dishes.price}} €</h3>
+
+            <h3 class="w-50 text-right fs-5 p-1 m-2">{{dishes.available ? 'This dish waits for':'unfortunatly eaten'}}</h3>
+                     <div class="availability" *ngIf="dishes.available"> <i aria-hidden="true"><h3 class="btn ${this.available ? 'true':'false'} btn-primary  text-center fs-5 p-1 m-2" routerLink="/Dishes/{{dishes.id}}">Details</h3></i></div>
+                    
+    </div>
+</div>
+    </div>
+</div>
+
